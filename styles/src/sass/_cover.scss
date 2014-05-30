@@ -1,0 +1,61 @@
+.cover {
+}
+
+.cover__fotorama {
+  background-color: $color-text;
+}
+
+.cover__layout {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+
+  $extraPadding: 7px;
+
+  .text-bg, .text-bg__1, .text-bg__2 {
+    color: $color-bg;
+    background-color: $color-text;
+    padding: $extraPadding 0 $extraPadding*1.5;
+    position: relative;
+    left: -$extraPadding;
+  }
+  .text-bg__1 {
+    left: $extraPadding*4;
+  }
+  .text-bg__2 {
+    left: -$extraPadding*2;
+    padding: 0;
+    z-index: 2;
+  }
+}
+
+.cover__floor {
+  color: $color-bg;
+  height: 100%;
+
+  h1 a {
+    @include link-colors($color-bg, $color-bg, $color-bg, 0, !important);
+  }
+
+  .blog-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .note-title-date {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+
+  .e2-note-text {
+    max-width: 36em;
+  }
+}

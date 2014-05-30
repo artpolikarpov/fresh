@@ -1,0 +1,15 @@
+$sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: Georgia, 'Times New Roman', Times, serif;
+$monospace: Menlo, Consolas, 'Courier New', monospace;
+
+%sans-serif {
+  font-family: $sans-serif;
+}
+
+%serif {
+  font-family: $serif;
+}
+
+%monospace {
+  font-family: $monospace;
+}

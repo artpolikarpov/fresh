@@ -1,0 +1,27 @@
+=color-n-border($color, $border-opacity: $link-underline-opacity, $important: 0)
+  @if $important == 0
+    color: $color
+    border-color: $color
+    @if $border-opacity != 1
+      border-color: rgba($color, $border-opacity)
+  @else
+    color: $color !important
+    border-color: $color !important
+    @if $border-opacity != 1
+      border-color: rgba($color, $border-opacity) !important
+
+=link-colors($link: 0, $hover: 0, $active: 0, $visited: 0, $important: 0, $border-opacity: $link-underline-opacity, $border-hover-opacity: $link-hover-underline-opacity)
+  @if $link != 0
+    +color-n-border($link, $border-opacity, $important)
+    &[disabled]
+      color: $link !important
+  @if $visited != 0
+    &:visited
+      +color-n-border($visited, $border-opacity, $important)
+  @if $active != 0
+    &:active
+      +color-n-border($active, $border-opacity, $important)
+  @if $hover != 0
+    &:hover,
+    &.hover
+      +color-n-border($hover, $border-hover-opacity, $important)

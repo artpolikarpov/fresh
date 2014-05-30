@@ -1,0 +1,67 @@
+/* Раскладка */
+//.admin-menu {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  background: #fff;
+//}
+
+.layout {
+  min-width: 0;
+  max-width: 100%;
+  margin: 2em $side-margin 3em;
+}
+
+.layout__layout {
+  margin-left: -($side-margin);
+  margin-right: -($side-margin);
+  padding-left: $side-margin;
+  padding-right: $side-margin;
+}
+
+@media screen and (max-width: $break-point) {
+  .layout {
+    margin-left: $side-margin--small;
+    margin-right: $side-margin--small;
+  }
+  .layout__layout {
+    margin-left: -($side-margin--small);
+    margin-right: -($side-margin--small);
+    padding-left: $side-margin--small;
+    padding-right: $side-margin--small;
+  }
+}
+
+/* Этажи */
+.layout__floor {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+/* Дополнительно ограничиваю по ширине кой-какие блоки */
+%text-max-width {
+  max-width: $text-max-width;
+}
+
+.e2-text {
+  p, ul, ol, li, blockquote, pre, h2, h3, h4, h5, h6, hr {
+    @extend %text-max-width;
+  }
+}
+
+.e2-text-audio, .form-control, .spotlight {
+  @extend %text-max-width;
+}
+
+/* Для очистки потока */
+.clear {
+  clear: both;
+  height: 1px;
+  font-size: 1px;
+  margin: 0;
+  float: none;
+}

@@ -1,0 +1,34 @@
+/* Адаптив */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.e2-text-picture img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.upyachka {
+  background-color: #f5f6f7;
+}
+
+.e2-text-video {
+  position: relative;
+  padding-bottom: 56.25%; /* height / width = 9 / 16 */
+}
+
+.e2-text-video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.e2-text-picture-zoomed > img {
+  max-width: 99999px;
+}

@@ -1,0 +1,278 @@
+.e2-heading {
+  margin-bottom: 1em;
+}
+
+.e2-note, .e2-comment {
+  margin-bottom: 4em;
+}
+
+.e2-note-title {
+  font-size: (30/16)+em;
+  line-height: 1.2;
+  margin-bottom: (20/30)+em;
+
+  @media screen and (min-width: $break-point) {
+    .layout--cover & {
+      font-size: (42/16)+em;
+      line-height: 1;
+      max-width: 14em;
+      margin-bottom: (20/42)+em;
+    }
+  }
+
+  a {
+    @extend %black-link;
+  }
+}
+
+.e2-note-date {
+  font-size: (13/16)+em;
+  margin-bottom: .4em;
+  position: relative;
+  z-index: 2;
+}
+
+.e2-text {
+  line-height: 1.6;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    @extend .clear;
+  }
+
+  p, ul, ol {
+    @extend %serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p:empty {
+    display: none;
+  }
+
+  li {
+    margin-bottom: .6em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p,
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    margin-top: 0;
+  }
+
+  &-generic-object,
+  &-table,
+  &-audio,
+  blockquote {
+    margin-bottom: 1.5em;
+  }
+
+  &-table {
+    font-size: 90%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    @media screen and (min-width: $break-point) {
+      margin-left: $left-indent;
+    }
+  }
+
+
+  img[alt="cover"] {
+    display: none;
+  }
+
+  &-picture,
+  &-picture.fotorama,
+  &-video,
+  pre {
+    margin-bottom: 2em;
+  }
+
+  code, tt {
+    color: $color-code;
+    font-size: 90%;
+  }
+
+  pre {
+    white-space: pre;
+    position: relative;
+
+    code {
+      background: #f3f3f3;
+      color: #455b63;
+      overflow: auto;
+      padding: 18px $left-indent 24px;
+      margin-left: $left-negative-indent;
+      border-radius: 3px;
+      font-size: 85%;
+    }
+  }
+
+  ul,
+  ol,
+  blockquote {
+    margin-left: 0;
+    padding-left: $left-indent;
+  }
+
+  p + ul, p + ol {
+    margin-top: -.5em;
+  }
+
+  th, td {
+    padding: 0 1em .6em 0;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  hr {
+    margin: 2em 0 1.5em;
+    border: none;
+    border-bottom: 1px solid #dadada;
+  }
+
+  > * {
+    clear: both;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  [lead]:first-child {
+    font-family: $sans-serif;
+    font-size: 110%;
+    margin-top: -.8em;
+    .layout--cover & {
+      margin-top: 0;
+    }
+  }
+
+  [aside] {
+    margin-left: 33%;
+    margin-top: .1em;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+    text-align: right;
+  }
+
+  @media screen and (min-width: $break-point / 1.33) {
+    [main] {
+      float: left;
+      width: 70%;
+      clear: left;
+    }
+
+    [main] + [aside] {
+      float: left;
+      clear: right;
+      text-align: left;
+      width: 20%;
+      margin-left: 10%;
+    }
+  }
+
+  small {
+    opacity: $half-opacity;
+  }
+
+  [aside], &-picture p {
+    font-family: $sans-serif;
+    opacity: $half-opacity;
+    font-size: 90%;
+  }
+
+  [alone] {
+    margin-top: 0;
+  }
+
+  .jouele {
+    width: 90%;
+    max-width: 500px;
+    padding: 8px 10px 12px;
+    background-image: -webkit-gradient(linear, top left, bottom left, from(#f0f1f2), #fafbfc, to(#eaebec));
+    background-image: -webkit-linear-gradient(#f0f1f2, #fafbfc, #eaebec);
+    background-image: linear-gradient(#f0f1f2, #fafbfc, #eaebec);
+    border-radius: 3px;
+  }
+}
+
+
+.e2-note-text {
+  font-size: 110%;
+  margin-bottom: 1em;
+
+  .note-title-date & {
+    margin-bottom: 0;
+  }
+}
+
+.e2-note-likes, .e2-note-tags, .e2-note-comments-link {
+  font-size: (14/16)+em;
+  margin-bottom: 1em;
+}
+
+.e2-note-list {
+  line-height: 1.4;
+  li {
+    margin-bottom: .5em;
+  }
+}
+
+.e2-pages {
+  line-height: 1.4;
+  margin-bottom: 1em;
+  a {
+    padding-top: .3em;
+  }
+}
+
+.e2-section-heading {
+  font-size: (18/16)+em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.e2-popular {
+  max-width: 700px;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 3em;
+  -moz-column-gap: 3em;
+  column-gap: 3em;
+  line-height: 1.4;
+
+  @media screen and (max-width: $break-point) {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+  }
+
+  p {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 0 .5em 0;
+  }
+
+  a {
+    padding-top: .3em;
+  }
+}

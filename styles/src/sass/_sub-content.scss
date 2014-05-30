@@ -1,0 +1,13 @@
+.sub-content {
+  overflow: hidden;
+
+  &#comments {
+    background-color: #f5f6f7;
+    .sub-content__wrap {
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+  }
+
+  margin-bottom: 3em;
+}
