@@ -1,4 +1,10 @@
+# dev
 .sass-cache
 .idea
-node_modules
+node_modules/
 copies.js
+
+# gh-pages
+index.html
+system/
+pictures/
