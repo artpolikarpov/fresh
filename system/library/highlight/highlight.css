@@ -1,0 +1,93 @@
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+pre code {
+  display: block;
+  background: #fdf6e3; color: #657b83;
+  background: transparent;
+  padding: 0;
+}
+
+pre .hljs-comment,
+pre .hljs-template_comment,
+pre .hljs-diff .hljs-header,
+pre .hljs-doctype,
+pre .hljs-pi,
+pre .hljs-lisp .hljs-string,
+pre .hljs-javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+pre .hljs-keyword,
+pre .hljs-winutils,
+pre .hljs-method,
+pre .hljs-addition,
+pre .hljs-css .hljs-tag,
+pre .hljs-request,
+pre .hljs-status,
+pre .hljs-nginx .hljs-title {
+  color: #859900;
+}
+
+pre .hljs-number,
+pre .hljs-command,
+pre .hljs-string,
+pre .hljs-tag .hljs-value,
+pre .hljs-rules .hljs-value,
+pre .hljs-phpdoc,
+pre .hljs-tex .hljs-formula,
+pre .hljs-regexp,
+pre .hljs-hexcolor {
+  color: #2aa198;
+}
+
+pre .hljs-title,
+pre .hljs-localvars,
+pre .hljs-chunk,
+pre .hljs-decorator,
+pre .hljs-built_in,
+pre .hljs-identifier,
+pre .hljs-vhdl .hljs-literal,
+pre .hljs-id,
+pre .hljs-css .hljs-function {
+  color: #268bd2;
+}
+
+pre .hljs-attribute,
+pre .hljs-variable,
+pre .hljs-lisp .hljs-body,
+pre .hljs-smalltalk .hljs-number,
+pre .hljs-constant,
+pre .hljs-class .hljs-title,
+pre .hljs-parent,
+pre .hljs-haskell .hljs-type {
+  color: #b58900;
+}
+
+pre .hljs-preprocessor,
+pre .hljs-preprocessor .hljs-keyword,
+pre .hljs-shebang,
+pre .hljs-symbol,
+pre .hljs-symbol .hljs-string,
+pre .hljs-diff .hljs-change,
+pre .hljs-special,
+pre .hljs-attr_selector,
+pre .hljs-important,
+pre .hljs-subst,
+pre .hljs-cdata,
+pre .hljs-clojure .hljs-title,
+pre .hljs-css .hljs-pseudo {
+  color: #cb4b16;
+}
+
+pre .hljs-deletion {
+  color: #dc322f;
+}
+
+pre .hljs-tex .hljs-formula {
+  background: #eee8d5;
+}
