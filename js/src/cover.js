@@ -13,14 +13,14 @@ $(function () {
   var colors = $.map($coverImg.attr('alt').split(' ').slice(1), function (color) {
     return 'cover__color--' + color
   }).join(' ');
-  var minheight = 300;
+  var minHeight = 300;
   var $fotorama = $('<div class="cover__fotorama ' + colors + '"></div>')
       .insertBefore($root.addClass('cover'))
       .fotorama({
         width: '100%',
         ratio: 16/9,
         maxheight: '90%',
-        minheight: minheight,
+        minheight: minHeight,
         fit: 'cover',
         allowfullscreen: false,
         nav: false,
@@ -51,23 +51,36 @@ $(function () {
     var $window = $(window);
     var $stage = $('.fotorama__stage', $fotorama);
     var parallax = 5;
+    var fotoramaHeight = 0;
+    var scrollTop;
 
     $window
         .on('resize orientationchange', function () {
-          var _minheight = 0;
+          var _minHeight = 0;
 
           $('.js-cover').each(function () {
-            _minheight += $(this).innerHeight();
+            _minHeight += $(this).innerHeight();
           });
 
-          if (_minheight > minheight) {
-            minheight = _minheight;
-            fotorama.setOptions({minheight: minheight});
+          if (_minHeight > minHeight) {
+            minHeight = _minHeight;
+            fotorama.setOptions({minheight: minHeight});
           }
+
+          fotoramaHeight = $fotorama.height();
+
           $window.scroll();
         })
         .on('scroll', function () {
-          $stage.css({transform: 'translateY(' + (Math.max($window.scrollTop(), 0) / parallax) + 'px)'});
+          var _scrollTop = Math.min(Math.max($window.scrollTop(), 0), fotoramaHeight);
+
+          console.log('_scrollTop', _scrollTop);
+
+          if (_scrollTop !== scrollTop) {
+            console.log('transform the $stage');
+            scrollTop = _scrollTop;
+            $stage.css({transform: 'translateY(' + (Math.max($window.scrollTop(), 0) / parallax) + 'px)'});
+          }
         })
         .resize();
     }
