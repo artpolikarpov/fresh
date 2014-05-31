@@ -14,8 +14,8 @@ $(function () {
     return 'cover__color--' + color
   }).join(' ');
   var minheight = 300;
-  var fotorama = $('<div class="cover__fotorama ' + colors + '"></div>')
-      .insertBefore($root)
+  var $fotorama = $('<div class="cover__fotorama ' + colors + '"></div>')
+      .insertBefore($root.addClass('cover'))
       .fotorama({
         width: '100%',
         ratio: 16/9,
@@ -28,8 +28,8 @@ $(function () {
         click: false,
         swipe: false,
         trackpad: false
-      })
-      .data('fotorama');
+      });
+  var fotorama = $fotorama.data('fotorama');
 
   var $dummy = $('<div></div>');
 
@@ -43,23 +43,32 @@ $(function () {
 
   fotorama.load([{img: src, html: '<div class="layout layout--cover cover__layout ' + colors + ' fotorama__select"><div class="layout__floor cover__floor">' + $dummy.html() +'</div></div>'}]);
 
-  $(window).on('resize orientationchange', function () {
-    var _minheight = 0;
+  var $window = $(window);
+  var $stage = $('.fotorama__stage', $fotorama);
+  var parallax = 5;
 
-    $('.js-cover').each(function () {
-      console.log('$(this).innerHeight()', $(this).innerHeight());
-      _minheight += $(this).innerHeight();
-    });
+  $window
+      .on('resize orientationchange', function () {
+        var _minheight = 0;
 
-    console.log('_minheight', _minheight);
+        $('.js-cover').each(function () {
+          console.log('$(this).innerHeight()', $(this).innerHeight());
+          _minheight += $(this).innerHeight();
+        });
 
-    if (_minheight > minheight) {
-      minheight = _minheight;
-      fotorama.setOptions({minheight: minheight});
+        console.log('_minheight', _minheight);
 
-      console.log('new minheight', minheight);
-    }
+        if (_minheight > minheight) {
+          minheight = _minheight;
+          fotorama.setOptions({minheight: minheight});
 
-  }).resize();
+          console.log('new minheight', minheight);
+        }
+        $window.scroll();
+      })
+      .on('scroll', function () {
+        $stage.css({transform: 'translateY(' + ($window.scrollTop() / parallax) + 'px)'});
+      })
+      .resize();
 
 });

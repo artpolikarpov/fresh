@@ -16,6 +16,25 @@ pre, tt, code, pre *, tt *, code * {
   min-width: 0;
   max-width: 100%;
   margin: 2em 3em 3em;
+  padding: 0;
+  position: relative;
+}
+.layout:before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  margin-top: -2em;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 1px, 100% 10px;
+  background-size: 100% 1px, 100% 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(25%, rgba(0, 0, 0, 0.15)), color-stop(75%, rgba(0, 0, 0, 0.15)), to(transparent)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 75%, transparent), -webkit-radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-image: linear-gradient(left, transparent, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.15) 75%, transparent), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.3), transparent);
+  background-position: 0 100%, 0 100%;
 }
 
 .layout__layout {
@@ -104,9 +123,9 @@ a:hover, a.hover {
   border-color: rgba(0, 96, 160, 0.2);
 }
 .e2-text a:visited, .e2-note-comments-link a:visited, .e2-note-tags a:visited, .e2-pages a:visited {
-  color: #546e7f;
-  border-color: #546e7f;
-  border-color: rgba(84, 110, 127, 0.2);
+  color: #39586c;
+  border-color: #39586c;
+  border-color: rgba(57, 88, 108, 0.2);
 }
 
 a.black-link, .title h1 a, .e2-note-title a, .cover__layout.cover__color--black .text-bg a {
@@ -170,6 +189,9 @@ img.upyachka {
 
 .header {
   margin-bottom: 4em;
+}
+.cover .header {
+  display: none;
 }
 
 .title {
@@ -254,6 +276,9 @@ img.upyachka {
 .e2-text li:last-child {
   margin-bottom: 0;
 }
+.e2-text h2 {
+  font-size: 1.25em;
+}
 .e2-text p,
 .e2-text ul,
 .e2-text ol {
@@ -319,7 +344,11 @@ img.upyachka {
 .e2-text hr {
   margin: 2em 0 1.5em;
   border: none;
-  border-bottom: 1px solid #dadada;
+  height: 1px;
+  background-color: #d9d9d9;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(5%, #d9d9d9), color-stop(95%, #d9d9d9), to(white));
+  background-image: -webkit-linear-gradient(left, white, #d9d9d9 5%, #d9d9d9 95%, white);
+  background-image: linear-gradient(to right, white, #d9d9d9 5%, #d9d9d9 95%, white);
 }
 .e2-text > * {
   clear: both;
@@ -490,9 +519,6 @@ img.upyachka {
 }
 .cover__fotorama.cover__color--black {
   background-color: white;
-}
-.cover__fotorama.cover__color--transparent {
-  background-color: #7f7f7f;
 }
 
 .cover__layout {
