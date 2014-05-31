@@ -33,13 +33,13 @@
 
 <!-- GA -->
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-21114316-9', 'artpolikarpov.github.io');
-  ga('send', 'pageview');
+//  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//
+//  ga('create', 'UA-21114316-9', 'artpolikarpov.github.io');
+//  ga('send', 'pageview');
 </script>
 
 
@@ -99,7 +99,7 @@
 
 <article class="e2-note-text e2-text e2-published">
 <div class="e2-text-picture">
-<img src="pictures/wkjFpgTwSPnxksbAxnkA@2x.jpg" width="1000" height="666" alt="cover black transparent" />
+<img src="pictures/unsplash_52d5b2dfdf619@2x.jpg" width="1000" height="664" alt="cover transparent" />
 </div>
 <p lead>Лаконичная адаптивная тема оформления <br> для блогов на Эгее за *** рублей.</p>
 <p>Привет!</p>
@@ -116,22 +116,24 @@ color: #fff; background-color: #0060a0;
 }
 </style>
 <div class="download-box">
-<a class="button download-button js-analytics-click" data-action="download" href="?">Cкачать тему</a><br>
+<a class="button download-button js-analytics-click" data-action="download" href="https://github.com/artpolikarpov/theme-polikarpov/archive/master.zip">Cкачать тему</a><br>
 <small>Для Эгеи 2.4+<br>
 Бесплатно для тестирования и разработки<br>
 <a href="#asterisks" class="e2-pseudolink black-link js-analytics-click" data-action="anchor">Для сайтов в интернете — *** рублей</a></small>
 </div>
 
-<br>
+<hr>
+
 <h2>Резиновая</h2>
 <p>Теперь блог удобно читать и редактировать даже на телефоне:</p>
 <div class="e2-text-picture">
 <img src="pictures/theme-polikarpov@2x.png" width="792" height="744" alt="" />
 </div>
 <p>Откройте эту страницу на телефоне или сожмите окно браузера, ничто не заставит появиться горизонтальную прокрутку.</p>
-<p>Ни картинка:</p>
+<p>Ни фотография:</p>
 <div class="e2-text-picture">
 <img src="pictures/iqlYdAAYQiaOCoKnT6jE@2x.jpg" width="1000" height="562" alt="" />
+<p>Адаптивное изображение, вылеченное <a href="https://github.com/artpolikarpov/upyachka.js#upyachkajs" class="js-analytics-click" data-action="outbound">от Упячки</a></p>
 </div>
 <p>Ни видео:</p>
 <div class="e2-text-video">
@@ -220,27 +222,30 @@ and a newline to the screen:
 <h2>С большой картинкой сверху</h2>
 <p>Чтобы добавить обложку заметке, как на этой странице, достаточно добавить <tt>cover</tt> после имени картинки:</p>
 <pre class="e2-text-code"><code>oblozhka.jpg cover</code></pre>
-<p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком.</p>
+<p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком. Параллакс при прокрутке — приятный бонус.</p>
 
 <p>Есть несколько стилей текста над обложкой:</p>
-<pre class="e2-text-code"><code><!-- Белый текст на чёрной подложке -->
+<pre class="e2-text-code"><code>&lt;!-- Белый текст на чёрной подложке -->
 oblozhka.jpg cover white
 
-<!-- Чёрный текст на белой подложке -->
+&lt;!-- Чёрный текст на белой подложке -->
 oblozhka.jpg cover black
 
-<!-- Белый текст без подложки -->
+&lt;!-- Белый текст без подложки -->
 oblozhka.jpg cover white transparent
 
-<!-- Чёрный текст без подложки -->
+&lt;!-- Чёрный текст без подложки -->
 oblozhka.jpg cover black transparent</code></pre>
 <p>Вводное предложение под заголовком обозначается атрибутом <tt>lead</tt>:</p>
 <pre class="e2-text-code"><code>&lt;p lead&gt;Лаконичная адаптивная тема оформления для блогов на Эгее&lt;/p&gt;</code></pre><h2>С пометками на полях</h2>
 <p main>Бывает, что-то хочется вынести на поля — картиночку, ссылку, идею — теперь это можно делать в Эгее.</p>
-<p aside>См. что-то</p>
+<p aside>См. <a href="http://ru.wiktionary.org/wiki/%D1%87%D1%82%D0%BE-%D1%82%D0%BE" class="js-analytics-click" data-action="outbound">что-то</a></p>
 <p>Синтаксис такой:</p>
 <pre class="e2-text-code"><code>&lt;p main&gt;Главная мысль.&lt;/p&gt;
 &lt;p aside&gt;Побочная&lt;/p&gt;</code></pre>
+
+<hr>
+
 <h2>Установка и использование</h2>
 <p>Распакуйте архив с темой в папку /<i>themes</i>/, чтобы получилась такая структура:</p>
 <div class="e2-text-picture">
@@ -251,9 +256,9 @@ oblozhka.jpg cover black transparent</code></pre>
 <img src="pictures/settings@2x.png" width="616" height="178" alt="" />
 </div>
 
-<hr>
+<hr><br>
 <div class="download-box">
-<a class="button download-button js-analytics-click" data-action="download" href="?">Cкачать тему</a><br>
+<a class="button download-button js-analytics-click" data-action="download" href="https://github.com/artpolikarpov/theme-polikarpov/archive/master.zip">Cкачать тему</a><br>
 <small>Для Эгеи 2.4+<br>
 Бесплатно для тестирования и разработки</small>
 </div>
@@ -346,7 +351,7 @@ oblozhka.jpg cover black transparent</code></pre>
       </div>
 
       <div class="e2-comment-content e2-text">
-      <p>Исходный код на Гитхабе: <a href="?" class="js-analytics-click" data-action="outbound">?</a>. Заблуждение амбивалентно.</p>
+      <p>Исходный код на Гитхабе: <a href="https://github.com/artpolikarpov/theme-polikarpov/" class="js-analytics-click" data-action="outbound">https://github.com/artpolikarpov/theme-polikarpov/</a></p>
 
             </div>
 
