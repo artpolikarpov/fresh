@@ -63,10 +63,6 @@ $(function () {
             minheight = _minheight;
             fotorama.setOptions({minheight: minheight});
 
-<<<<<<< HEAD
-            console.log('new minheight', minheight);
-=======
->>>>>>> 6669365... Уладил конфликт мёрджа
           }
           $window.scroll();
         })
@@ -75,8 +71,4 @@ $(function () {
         })
         .resize();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6669365... Уладил конфликт мёрджа
 });
