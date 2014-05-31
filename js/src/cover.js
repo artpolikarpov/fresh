@@ -52,17 +52,17 @@ $(function () {
         var _minheight = 0;
 
         $('.js-cover').each(function () {
-          console.log('$(this).innerHeight()', $(this).innerHeight());
+          //console.log('$(this).innerHeight()', $(this).innerHeight());
           _minheight += $(this).innerHeight();
         });
 
-        console.log('_minheight', _minheight);
+        //console.log('_minheight', _minheight);
 
         if (_minheight > minheight) {
           minheight = _minheight;
           fotorama.setOptions({minheight: minheight});
 
-          console.log('new minheight', minheight);
+          //console.log('new minheight', minheight);
         }
         $window.scroll();
       })
