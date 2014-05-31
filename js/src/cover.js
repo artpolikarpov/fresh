@@ -53,37 +53,16 @@ $(function () {
         .on('resize orientationchange', function () {
           var _minheight = 0;
 
-<<<<<<< HEAD
-        $('.js-cover').each(function () {
-          //console.log('$(this).innerHeight()', $(this).innerHeight());
-          _minheight += $(this).innerHeight();
-        });
-
-        //console.log('_minheight', _minheight);
-=======
           $('.js-cover').each(function () {
-            console.log('$(this).innerHeight()', $(this).innerHeight());
             _minheight += $(this).innerHeight();
           });
 
           console.log('_minheight', _minheight);
->>>>>>> 08a89ca... Поправил .e2-search, отключил параллакс на мобилках
 
           if (_minheight > minheight) {
             minheight = _minheight;
             fotorama.setOptions({minheight: minheight});
 
-<<<<<<< HEAD
-          //console.log('new minheight', minheight);
-        }
-        $window.scroll();
-      })
-      .on('scroll', function () {
-        $stage.css({transform: 'translateY(' + ($window.scrollTop() / parallax) + 'px)'});
-      })
-      .resize();
-=======
-            console.log('new minheight', minheight);
           }
           $window.scroll();
         })
@@ -92,6 +71,4 @@ $(function () {
         })
         .resize();
     }
->>>>>>> 08a89ca... Поправил .e2-search, отключил параллакс на мобилках
-
 });
