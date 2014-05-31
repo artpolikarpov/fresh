@@ -1,7 +1,9 @@
+window.console = window.console || {log: $.noop};
+
 $(function () {
   function sendEvent (optional) {
     if (window.ga) {
-      console.log('Analytics event', optional);
+      //console.log('Analytics event', optional);
       ga('send', 'event', optional);
     }
   }
