@@ -27,7 +27,10 @@ $(function () {
         arrows: false,
         click: false,
         swipe: false,
-        trackpad: false
+        trackpad: false,
+        spinner: {
+          zIndex: -1
+        }
       });
   var fotorama = $fotorama.data('fotorama');
 
