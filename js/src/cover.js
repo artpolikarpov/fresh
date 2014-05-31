@@ -67,7 +67,7 @@ $(function () {
           $window.scroll();
         })
         .on('scroll', function () {
-          $stage.css({transform: 'translateY(' + ($window.scrollTop() / parallax) + 'px)'});
+          $stage.css({transform: 'translateY(' + (Math.max($window.scrollTop(), 0) / parallax) + 'px)'});
         })
         .resize();
     }
