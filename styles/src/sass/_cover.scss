@@ -6,6 +6,10 @@
   &.cover__color--black {
     background-color: $color-bg;
   }
+
+  .fotorama__html {
+    z-index: 10;
+  }
 }
 
 .cover__layout {
