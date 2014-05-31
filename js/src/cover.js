@@ -74,10 +74,7 @@ $(function () {
         .on('scroll', function () {
           var _scrollTop = Math.min(Math.max($window.scrollTop(), 0), fotoramaHeight);
 
-          console.log('_scrollTop', _scrollTop);
-
           if (_scrollTop !== scrollTop) {
-            console.log('transform the $stage');
             scrollTop = _scrollTop;
             $stage.css({transform: 'translateY(' + (Math.max($window.scrollTop(), 0) / parallax) + 'px)'});
           }
