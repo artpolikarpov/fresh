@@ -523,6 +523,11 @@ img.upyachka {
 .cover__fotorama .fotorama__html {
   z-index: 10;
 }
+.cover__fotorama .fotorama__spinner {
+  top: 0 !important;
+  left: 100% !important;
+  margin: 32px 0 0 -32px;
+}
 
 .cover__layout {
   margin-top: 0;
