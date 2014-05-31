@@ -11,10 +11,10 @@ $(function () {
   }
 
   var colors = $.map($coverImg.attr('alt').split(' ').slice(1), function (color) {
-    return 'cover__layout--' + color
+    return 'cover__color--' + color
   }).join(' ');
   var minheight = 300;
-  var fotorama = $('<div class="cover__fotorama"></div>')
+  var fotorama = $('<div class="cover__fotorama ' + colors + '"></div>')
       .insertBefore($root)
       .fotorama({
         width: '100%',

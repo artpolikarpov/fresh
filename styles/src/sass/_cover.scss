@@ -3,6 +3,13 @@
 
 .cover__fotorama {
   background-color: $color-text;
+  &.cover__color--black {
+    background-color: $color-bg;
+  }
+
+  &.cover__color--transparent {
+    background-color: mix(black, white);
+  }
 }
 
 .cover__layout {
@@ -20,7 +27,7 @@
     }
   }
 
-  &.cover__layout--white {
+  &.cover__color--black {
     .text-bg {
       color: $color-text;
       background-color: $color-bg;
@@ -30,7 +37,7 @@
     }
   }
 
-  &.cover__layout--transparent {
+  &.cover__color--transparent {
     .text-bg {
       background-color: transparent;
     }
