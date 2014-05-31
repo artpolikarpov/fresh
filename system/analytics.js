@@ -8,6 +8,8 @@ $(function () {
     }
   }
 
+  var $window = $(window);
+
   $(document)
       // клик по внешним ссылкам
       .on('click', '.js-analytics-click', function (e) {
@@ -42,4 +44,19 @@ $(function () {
           }
         });
       });
+
+  var resizeTimeout,
+      resizeStart = window.innerWidth;
+
+  $window.on('resize orientationchange', function resizeCallback (e) {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+      $window.off('resize orientationchange', resizeCallback);
+      sendEvent({
+        eventCategory: 'Resize',
+        eventAction: e.type,
+        eventLabel: resizeStart + 'px → ' + window.innerWidth + 'px'
+      });
+    }, 1000);
+  });
 });
