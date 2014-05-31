@@ -62,7 +62,7 @@ module.exports = function (grunt) {
       },
       copies: (function () {
         return copies.map(function (path) {
-          return path + 'themes/<%= pkg.name %>/'
+          return path + 'themes/<%= pkg.name %>-master/'
         });
       })()
     },
@@ -72,7 +72,7 @@ module.exports = function (grunt) {
           return copies.map(function (path) {
             return {
               src: files,
-              dest: path + 'themes/<%= pkg.name %>/'
+              dest: path + 'themes/<%= pkg.name %>-master/'
             }
           });
         })()

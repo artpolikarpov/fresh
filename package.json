@@ -1,7 +1,7 @@
 {
-  "name": "theme-polikarpov",
-  "title": "Theme “Polikarpov”",
-  "homepage": "https://artpolikarpov.github.io/theme-polikarpov/",
+  "name": "fresh",
+  "title": "Theme “Fresh”",
+  "homepage": "https://artpolikarpov.github.io/fresh/",
   "version": "1.0.1",
   "devDependencies": {
     "grunt": "~0.4.5",
