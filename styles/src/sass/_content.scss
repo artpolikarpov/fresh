@@ -59,6 +59,10 @@
     }
   }
 
+  h2 {
+    font-size: (20/16)+em;
+  }
+
   p,
   ul,
   ol {
@@ -140,7 +144,9 @@
   hr {
     margin: 2em 0 1.5em;
     border: none;
-    border-bottom: 1px solid #dadada;
+    height: 1px;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(to right, #fff, #d9d9d9 5%, #d9d9d9 95%, #fff);
   }
 
   > * {

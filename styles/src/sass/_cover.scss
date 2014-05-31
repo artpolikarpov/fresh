@@ -6,10 +6,6 @@
   &.cover__color--black {
     background-color: $color-bg;
   }
-
-  &.cover__color--transparent {
-    background-color: mix(black, white);
-  }
 }
 
 .cover__layout {
