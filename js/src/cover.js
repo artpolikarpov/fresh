@@ -43,32 +43,35 @@ $(function () {
 
   fotorama.load([{img: src, html: '<div class="layout layout--cover cover__layout ' + colors + ' fotorama__select"><div class="layout__floor cover__floor">' + $dummy.html() +'</div></div>'}]);
 
-  var $window = $(window);
-  var $stage = $('.fotorama__stage', $fotorama);
-  var parallax = 5;
+  if (!navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i)) {
+    // Включаю параллакс, если браузер не мобильный
+    var $window = $(window);
+    var $stage = $('.fotorama__stage', $fotorama);
+    var parallax = 5;
 
-  $window
-      .on('resize orientationchange', function () {
-        var _minheight = 0;
+    $window
+        .on('resize orientationchange', function () {
+          var _minheight = 0;
 
-        $('.js-cover').each(function () {
-          console.log('$(this).innerHeight()', $(this).innerHeight());
-          _minheight += $(this).innerHeight();
-        });
+          $('.js-cover').each(function () {
+            console.log('$(this).innerHeight()', $(this).innerHeight());
+            _minheight += $(this).innerHeight();
+          });
 
-        console.log('_minheight', _minheight);
+          console.log('_minheight', _minheight);
 
-        if (_minheight > minheight) {
-          minheight = _minheight;
-          fotorama.setOptions({minheight: minheight});
+          if (_minheight > minheight) {
+            minheight = _minheight;
+            fotorama.setOptions({minheight: minheight});
 
-          console.log('new minheight', minheight);
-        }
-        $window.scroll();
-      })
-      .on('scroll', function () {
-        $stage.css({transform: 'translateY(' + ($window.scrollTop() / parallax) + 'px)'});
-      })
-      .resize();
+            console.log('new minheight', minheight);
+          }
+          $window.scroll();
+        })
+        .on('scroll', function () {
+          $stage.css({transform: 'translateY(' + ($window.scrollTop() / parallax) + 'px)'});
+        })
+        .resize();
+    }
 
 });

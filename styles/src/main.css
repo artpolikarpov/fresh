@@ -19,7 +19,7 @@ pre, tt, code, pre *, tt *, code * {
   padding: 0;
   position: relative;
 }
-.layout:before {
+.layout.cover:before {
   content: '';
   position: absolute;
   top: -24px;
@@ -658,6 +658,9 @@ img.upyachka {
 }
 .e2-search {
   margin-bottom: 1em;
+}
+.e2-heading .e2-search {
+  margin-bottom: 2em;
 }
 
 .e2-search-input input {
