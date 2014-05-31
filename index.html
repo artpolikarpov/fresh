@@ -40,7 +40,7 @@
 
   ga('create', 'UA-21114316-9', 'artpolikarpov.github.io');
   ga('send', 'pageview');
-</script>>
+</script>
 
 
 
@@ -58,7 +58,7 @@
 
 <div class="js-cover blog-title">
   <div class="title">
-    <h1><span class="text-bg"><span class="text-bg__1"><span class="text-bg__2">
+    <h1><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
       <span id="e2-blog-title">АП</span>          </span></span></span></h1>
   </div>
 
@@ -75,11 +75,11 @@
 <div class="js-cover note-title-date">
   
   
-  <div class="e2-note-date" title="29 мая 2014, 23:12, GMT+04:00"><span class="text-bg"><span class="text-bg__1"><span class="text-bg__2">29 мая, 23:12</span></span></span></div>
+  <div class="e2-note-date" title="29 мая 2014, 23:12, GMT+04:00"><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">29 мая, 23:12</span></span></span></div>
 
   
     <h1 class="e2-published e2-smart-title e2-note-title">
-    <span class="text-bg"><span class="text-bg__1"><span class="text-bg__2">
+    <span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
       Тема «Поликарпов»
       <span style="white-space: nowrap">
 
@@ -99,7 +99,7 @@
 
 <article class="e2-note-text e2-text e2-published">
 <div class="e2-text-picture">
-<img src="pictures/wkjFpgTwSPnxksbAxnkA@2x.jpg" width="1000" height="666" alt="cover" />
+<img src="pictures/wkjFpgTwSPnxksbAxnkA@2x.jpg" width="1000" height="666" alt="cover black transparent" />
 </div>
 <p lead>Лаконичная адаптивная тема оформления <br> для блогов на Эгее за *** рублей.</p>
 <p>Привет!</p>
@@ -219,7 +219,21 @@ and a newline to the screen:
 </div>
 <h2>С большой картинкой сверху</h2>
 <p>Чтобы добавить обложку заметке, как на этой странице, достаточно добавить <tt>cover</tt> после имени картинки:</p>
-<pre class="e2-text-code"><code>oblozhka.jpg cover</code></pre><p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком.</p>
+<pre class="e2-text-code"><code>oblozhka.jpg cover</code></pre>
+<p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком.</p>
+
+<p>Есть несколько стилей текста над обложкой:</p>
+<pre class="e2-text-code"><code><!-- Белый текст на чёрной подложке -->
+oblozhka.jpg cover white
+
+<!-- Чёрный текст на белой подложке -->
+oblozhka.jpg cover black
+
+<!-- Белый текст без подложки -->
+oblozhka.jpg cover white transparent
+
+<!-- Чёрный текст без подложки -->
+oblozhka.jpg cover black transparent</code></pre>
 <p>Вводное предложение под заголовком обозначается атрибутом <tt>lead</tt>:</p>
 <pre class="e2-text-code"><code>&lt;p lead&gt;Лаконичная адаптивная тема оформления для блогов на Эгее&lt;/p&gt;</code></pre><h2>С пометками на полях</h2>
 <p main>Бывает, что-то хочется вынести на поля — картиночку, ссылку, идею — теперь это можно делать в Эгее.</p>
