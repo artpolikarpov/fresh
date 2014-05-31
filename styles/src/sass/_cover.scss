@@ -12,17 +12,39 @@
 
   $extraPadding: 7px;
 
-  .text-bg, .text-bg__1, .text-bg__2 {
+  .text-bg {
     color: $color-bg;
     background-color: $color-text;
+    a {
+      @include link-colors($color-bg, $color-bg, $color-bg, 0, !important);
+    }
+  }
+
+  &.cover__layout--white {
+    .text-bg {
+      color: $color-text;
+      background-color: $color-bg;
+      a {
+        @extend %black-link;
+      }
+    }
+  }
+
+  &.cover__layout--transparent {
+    .text-bg {
+      background-color: transparent;
+    }
+  }
+
+  .text-bg {
     padding: $extraPadding 0 $extraPadding*1.5;
     position: relative;
     left: -$extraPadding;
   }
-  .text-bg__1 {
+  .text-bg--1 {
     left: $extraPadding*4;
   }
-  .text-bg__2 {
+  .text-bg--2 {
     left: -$extraPadding*2;
     padding: 0;
     z-index: 2;
@@ -30,12 +52,7 @@
 }
 
 .cover__floor {
-  color: $color-bg;
   height: 100%;
-
-  h1 a {
-    @include link-colors($color-bg, $color-bg, $color-bg, 0, !important);
-  }
 
   .blog-title {
     position: absolute;
@@ -57,5 +74,8 @@
 
   .e2-note-text {
     max-width: 36em;
+    p, ul, ol {
+      overflow: visible;
+    }
   }
 }

@@ -1,5 +1,6 @@
 $(function () {
-  var $coverImg = $('img[alt="cover"]');
+  var $coverImg = $('img[alt^="cover"]');
+
   var src = $coverImg.attr('src');
   var $root = $('#layout-root');
 
@@ -9,6 +10,9 @@ $(function () {
     return;
   }
 
+  var colors = $.map($coverImg.attr('alt').split(' ').slice(1), function (color) {
+    return 'cover__layout--' + color
+  }).join(' ');
   var minheight = 300;
   var fotorama = $('<div class="cover__fotorama"></div>')
       .insertBefore($root)
@@ -27,7 +31,6 @@ $(function () {
       })
       .data('fotorama');
 
-  var html = $('#cover-html').html();
   var $dummy = $('<div></div>');
 
   $('.js-cover').each(function () {
@@ -35,10 +38,10 @@ $(function () {
   });
 
   $('*[lead]').each(function () {
-    $(this).wrapInner('<span class="text-bg"><span class="text-bg__1"><span class="text-bg__2"></span></span></span>').appendTo($('.js-cover-lead', $dummy));
+    $(this).wrapInner('<span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"></span></span></span>').appendTo($('.js-cover-lead', $dummy));
   });
 
-  fotorama.load([{img: src, html: html.replace('+++', $dummy.html())}]);
+  fotorama.load([{img: src, html: '<div class="layout layout--cover cover__layout ' + colors + ' fotorama__select"><div class="layout__floor cover__floor">' + $dummy.html() +'</div></div>'}]);
 
   $(window).on('resize orientationchange', function () {
     var _minheight = 0;

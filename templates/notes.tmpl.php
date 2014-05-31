@@ -11,17 +11,17 @@
 
   <?php if (@$note['published?']) { ?>
 
-  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?>"><span class="text-bg"><span class="text-bg__1"><span class="text-bg__2"><?= _AGO ($note['time']) ?></span></span></span></div>
+  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?>"><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"><?= _AGO ($note['time']) ?></span></span></span></div>
 
   <?php } else { ?>
 
-  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><span class="text-bg"><span class="text-bg__1"><span class="text-bg__2"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span></span></span></div>
+  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span></span></span></div>
 
   <?php } ?>
 
   <?php // TITLE // ?>
   <h1 class="<?= ($note['published?'] and !$note['future?'])? 'e2-published' : 'e2-draft' ?> e2-smart-title e2-note-title">
-    <span class="text-bg"><span class="text-bg__1"><span class="text-bg__2">
+    <span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
       <?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?>
 
       <span style="white-space: nowrap">

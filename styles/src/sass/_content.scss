@@ -87,7 +87,7 @@
   }
 
 
-  img[alt="cover"] {
+  img[alt^="cover"] {
     display: none;
   }
 

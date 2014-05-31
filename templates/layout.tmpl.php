@@ -5,7 +5,7 @@
 
 <div class="js-cover blog-title">
   <div class="title">
-    <h1><span class="text-bg"><span class="text-bg__1"><span class="text-bg__2">
+    <h1><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
       <?= _A ('<a href="'. $content['blog']['href']. '"><span id="e2-blog-title">'. $content['blog']['title']. '</span></a>') ?>
       <?php
         if (
@@ -113,8 +113,3 @@
 <?php _CSS ('theme-polikarpov') ?>
 <?php _LIB ('fotorama') ?>
 <?php _JS ('theme-polikarpov') ?>
-
-
-<script type="text/x-template" id="cover-html">
-  <div class="layout layout--cover cover__layout fotorama__select"><div class="layout__floor cover__floor">+++</div></div>
-</script>
