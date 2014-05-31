@@ -520,6 +520,9 @@ img.upyachka {
 .cover__fotorama.cover__color--black {
   background-color: white;
 }
+.cover__fotorama .fotorama__html {
+  z-index: 10;
+}
 
 .cover__layout {
   margin-top: 0;
