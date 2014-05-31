@@ -57,12 +57,9 @@ $(function () {
             _minheight += $(this).innerHeight();
           });
 
-          console.log('_minheight', _minheight);
-
           if (_minheight > minheight) {
             minheight = _minheight;
             fotorama.setOptions({minheight: minheight});
-
           }
           $window.scroll();
         })
