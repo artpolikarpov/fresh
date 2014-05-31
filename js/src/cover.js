@@ -54,7 +54,6 @@ $(function () {
           var _minheight = 0;
 
           $('.js-cover').each(function () {
-            console.log('$(this).innerHeight()', $(this).innerHeight());
             _minheight += $(this).innerHeight();
           });
 
@@ -64,7 +63,10 @@ $(function () {
             minheight = _minheight;
             fotorama.setOptions({minheight: minheight});
 
+<<<<<<< HEAD
             console.log('new minheight', minheight);
+=======
+>>>>>>> 6669365... Уладил конфликт мёрджа
           }
           $window.scroll();
         })
@@ -73,5 +75,8 @@ $(function () {
         })
         .resize();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6669365... Уладил конфликт мёрджа
 });
