@@ -5,6 +5,6 @@
     'ru' => 'Свежая',
   ),
 
-  'max_image_width' => '1000',
+  'max_image_width' => '1440',
 
 ); ?>
