@@ -7,7 +7,7 @@ $(function () {
 
   $coverImg.parents('.e2-text-picture').remove();
 
-  if (!src || !$root.hasClass('layout--note')) {
+  if (!src || !$root.attr('class').match(/layout--note|layout--draft/)) {
     return;
   }
 
