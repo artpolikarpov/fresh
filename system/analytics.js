@@ -46,16 +46,22 @@ $(function () {
       });
 
   var resizeTimeout,
-      resizeStart = window.innerWidth;
+      innerWidth = window.innerWidth,
+      resizeStart = innerWidth;
 
   $window.on('resize orientationchange', function resizeCallback (e) {
+    var _innerWidth = window.innerWidth;
+    if (_innerWidth === innerWidth) {
+      return;
+    }
+    innerWidth = _innerWidth;
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function () {
       $window.off('resize orientationchange', resizeCallback);
       sendEvent({
         eventCategory: 'Resize',
         eventAction: e.type,
-        eventLabel: resizeStart + 'px → ' + window.innerWidth + 'px'
+        eventLabel: resizeStart + 'px → ' + _innerWidth + 'px'
       });
     }, 1000);
   });
