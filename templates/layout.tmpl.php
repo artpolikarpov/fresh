@@ -110,6 +110,6 @@
 </div>
 
 <?php _LIB ('fotorama') ?>
-<?php _CSS ('theme-polikarpov') ?>
+<?php _CSS ('fresh') ?>
 <?php _LIB ('fotorama') ?>
-<?php _JS ('theme-polikarpov') ?>
+<?php _JS ('fresh') ?>
