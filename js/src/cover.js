@@ -5,10 +5,13 @@ $(function () {
   var ratio = $coverImg.attr('width') / $coverImg.attr('height');
   var $root = $('#layout-root');
 
-  $coverImg.parents('.e2-text-picture').remove();
-
   if (!src || !$root.attr('class').match(/layout--note|layout--draft/)) {
+    // Удаляю обложки cover из ленты, cover! (с восклицательным знаком) оставляю
+    $coverImg.not('[alt^="cover!"]').parents('.e2-text-picture').detach();
     return;
+  } else {
+    // Удаляю картинку обложки из тела поста
+    $coverImg.parents('.e2-text-picture').detach();
   }
 
   var colors = $.map($coverImg.attr('alt').split(' ').slice(1), function (color) {

@@ -304,6 +304,9 @@ img.upyachka {
 .e2-text img[alt^="cover"] {
   display: none;
 }
+.e2-text img[alt^="cover!"] {
+  display: inline;
+}
 .e2-text-picture, .e2-text-picture.fotorama, .e2-text-video,
 .e2-text pre {
   margin-bottom: 2em;
