@@ -84,7 +84,7 @@ $(function () {
 
           if (_scrollTop !== scrollTop) {
             scrollTop = _scrollTop;
-            $stage.css({transform: 'translateY(' + (Math.max($window.scrollTop(), 0) / parallaxRatio) + 'px)'});
+            $stage.css({transform: 'translateY(' + Math.round(_scrollTop / parallaxRatio) + 'px)'});
           }
         });
     }
