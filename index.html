@@ -223,7 +223,10 @@ and a newline to the screen:
 <h2>С большой картинкой сверху</h2>
 <p>Чтобы добавить обложку заметке, как на этой странице, достаточно добавить <tt>cover</tt> после имени картинки:</p>
 <pre class="e2-text-code"><code>oblozhka.jpg cover</code></pre>
-<p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком. Параллакс при прокрутке — приятный бонус.</p>
+<p>Скрипт спрячет её в ленте, а на странице заметки покажет вверху под крупным заголовком.</p>
+
+<p>Чтобы оставить картинку в ленте, добавьте восклицательный знак:</p>
+<pre class="e2-text-code"><code>oblozhka.jpg cover!</code></pre>
 
 <p>Есть несколько стилей текста над обложкой:</p>
 <pre class="e2-text-code"><code>&lt;!-- Белый текст на чёрной подложке -->
@@ -237,6 +240,7 @@ oblozhka.jpg cover white transparent
 
 &lt;!-- Чёрный текст без подложки -->
 oblozhka.jpg cover black transparent</code></pre>
+<p>Параллакс при прокрутке — приятный бонус.</p>
 <p>Вводное предложение под заголовком обозначается атрибутом <tt>lead</tt>:</p>
 <pre class="e2-text-code"><code>&lt;p lead&gt;Лаконичная адаптивная тема оформления для блогов на Эгее&lt;/p&gt;</code></pre><h2>С пометками на полях</h2>
 <p main>Бывает, что-то хочется вынести на поля — картиночку, ссылку, идею — теперь это можно делать в Эгее.</p>
@@ -317,10 +321,8 @@ oblozhka.jpg cover black transparent</code></pre>
 
 <div class="e2-section-heading">
 
-<span id="e2-comments-count">3 комментария</span>
+<span id="e2-comments-count">5 комментариев</span>
 </div>
-
-
 
 <div class="e2-comment-and-reply">
 
@@ -332,9 +334,8 @@ oblozhka.jpg cover black transparent</code></pre>
 
       <span
         class="e2-comment-author"
-        title="31 мая 2014, 00:28, GMT+04:00"
       >
-      <span class="e2-markable e2-marked">Шерлок</span>
+      <span class="e2-markable">Шерлок</span>
       </span>
 
 
@@ -352,7 +353,209 @@ oblozhka.jpg cover black transparent</code></pre>
       </div>
 
       <div class="e2-comment-content e2-text">
-      <p>Исходный код на Гитхабе: <a href="https://github.com/artpolikarpov/fresh/" class="js-analytics-click" data-action="outbound">https://github.com/artpolikarpov/fresh/</a></p>
+      <p>Исходный код на Гитхабе: <a href="https://github.com/artpolikarpov/fresh/" class="js-analytics-click" data-action="outbound">https://github.com/artpolikarpov/fresh/</a>.</p>
+
+            </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="e2-comment-and-reply">
+
+<div class=" ">
+
+  <div class="e2-comment e2-comment-control-group">
+
+    <div class="e2-comment-meta-area">
+
+      <span
+        class="e2-comment-author"
+      >
+      <span class="e2-markable ">Дмитрий Недовольный</span>
+      </span>
+
+
+      <span class="e2-comment-actions">
+                      </span>
+
+
+    </div>
+
+    <div class="e2-comment-content-area">
+
+      <div class="e2-comment-actions-removed admin-links" style="display: none">
+
+
+      </div>
+
+      <div class="e2-comment-content e2-text">
+      <p>Тема не завелась :—(</p>
+
+            </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="e2-comment e2-comment-control-group e2-reply ">
+
+    <div class="e2-comment-meta-area">
+      <div>
+
+      <span
+        class="e2-comment-author"
+      >
+        <span class="e2-markable e2-marked">Артём Поликарпов</span>
+      </span>
+
+      <span class="e2-comment-actions" style="margin-right: 16px">
+              </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="e2-comment-content-area">
+
+      <div class="e2-comment-actions-removed admin-links" style="display: none">
+
+
+      </div>
+
+      <div class="e2-comment-content e2-text">
+        <p>Проверьте, что у вас установлена Эгея 2.4.</p>
+        <p>Если у вас была Фоторама раньше, отключите её, она конфликтует с новой Фоторамой из комплекта. Удалите старую Фотораму из папки <i>/user/library/</i>, и её упоминания в файле <i>/user/extras/header-pre.tmpl.php</i>.</p>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="e2-comment-and-reply">
+
+<div class=" ">
+
+  <div class="e2-comment e2-comment-control-group">
+
+    <div class="e2-comment-meta-area">
+
+      <span
+        class="e2-comment-author"
+      >
+      <span class="e2-markable ">Павел Шадрин</span>
+      </span>
+
+
+      <span class="e2-comment-actions">
+                      </span>
+
+
+    </div>
+
+    <div class="e2-comment-content-area">
+
+      <div class="e2-comment-actions-removed admin-links" style="display: none">
+
+
+      </div>
+
+      <div class="e2-comment-content e2-text">
+      <p>При переходе на Эгею 2.4 стал воспроизводиться такой баг: при размещении текста после Фоторамы этот текст всегда выглядит, как подпись к картинке. То есть любой параграф после Фоторамы попадает в <tt>&lt;div class="e2-text-picture"></tt>.</p>
+
+            </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="e2-comment e2-comment-control-group e2-reply ">
+
+    <div class="e2-comment-meta-area">
+      <div>
+
+      <span
+        class="e2-comment-author"
+      >
+        <span class="e2-markable e2-marked">Артём Поликарпов</span>
+      </span>
+
+      <span class="e2-comment-actions" style="margin-right: 16px">
+              </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="e2-comment-content-area">
+
+      <div class="e2-comment-actions-removed admin-links" style="display: none">
+
+
+      </div>
+
+      <div class="e2-comment-content e2-text">
+        <p>Да, тоже заметил этот баг и починил у себя. Илья забыл закрыть тег. Замените файл <i>/system/neasden/extensions/fotorama.php</i> вот таким: <a href="https://gist.github.com/artpolikarpov/4e65b915169e3920f0e1">https://gist.github.com/artpolikarpov/4e65b915169e3920f0e1</a>.</p>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+</div>
+
+<div class="e2-comment-and-reply">
+
+<div class=" ">
+
+  <div class="e2-comment e2-comment-control-group">
+
+    <div class="e2-comment-meta-area">
+
+      <span
+        class="e2-comment-author"
+      >
+      <span class="e2-markable ">Павел Шадрин</span>
+      </span>
+
+
+      <span class="e2-comment-actions">
+                      </span>
+
+
+    </div>
+
+    <div class="e2-comment-content-area">
+
+      <div class="e2-comment-actions-removed admin-links" style="display: none">
+
+
+      </div>
+
+      <div class="e2-comment-content e2-text">
+      <p>Спасибо, заработало :—)</p>
 
             </div>
 
@@ -378,7 +581,6 @@ oblozhka.jpg cover black transparent</code></pre>
       
       <span
         class="e2-comment-author"
-        title="30 мая 2014, 19:41, GMT+04:00"
       >
       <span class="e2-markable ">Константин Анонимов</span>
       </span>
@@ -415,7 +617,6 @@ oblozhka.jpg cover black transparent</code></pre>
     
       <span
         class="e2-comment-author"
-        title="31 мая 2014, 00:24, GMT+04:00"
       >
         <span class="e2-markable ">Артём Поликарпов</span>
       </span>
@@ -462,7 +663,6 @@ oblozhka.jpg cover black transparent</code></pre>
       
       <span
         class="e2-comment-author"
-        title="31 мая 2014, 00:28, GMT+04:00"
       >
       <span class="e2-markable e2-marked">Этóт Важный</span>
       </span>
@@ -482,7 +682,7 @@ oblozhka.jpg cover black transparent</code></pre>
       </div>
       
       <div class="e2-comment-content e2-text">
-      <p>Ссылка <i>3 комментария</i> под заметкой в ленте ведёт сразу к коментариям по якорю. Надстройка категорически представляет собой мир, хотя в официозе принято обратное.</p>
+      <p>Ссылка <i>4 комментария</i> под заметкой в ленте ведёт сразу к коментариям по якорю. Надстройка категорически представляет собой мир, хотя в официозе принято обратное.</p>
     
             </div>
         
