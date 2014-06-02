@@ -94,6 +94,10 @@
     display: none;
   }
 
+  img[alt^="cover!"] {
+    display: inline;
+  }
+
   &-picture,
   &-picture.fotorama,
   &-video,
