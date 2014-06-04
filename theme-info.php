@@ -1,9 +1,11 @@
 <?php return array (
 
   'display_name' => array (
-    'en' => 'Fresh',
-    'ru' => 'Свежая',
+    'en' => 'My fresh',
+    'ru' => 'Мой фреш',
   ),
+
+  'based_on' => 'fresh-master',
 
   'max_image_width' => 1440,
 
