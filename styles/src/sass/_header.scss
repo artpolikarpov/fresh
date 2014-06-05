@@ -10,7 +10,9 @@
 
   h1 {
     font-size: (42/16)+em;
-    line-height: 1;
+    line-height: 1.1;
+
+    //@extend %ellipsis;
 
     .layout--cover &{
       font-size: (18/16)+em;

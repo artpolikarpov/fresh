@@ -23,20 +23,28 @@
   margin-bottom: 0;
   height: 100%;
 
-  $extraPadding: 7px;
+  $text-bg-size: 7px;
+  $text-bg: 0 floor($text-bg-size/2) 0 $text-bg-size*1.5;
 
   .text-bg {
     color: $color-bg;
     background-color: $color-text;
+    box-shadow: $text-bg $color-text;
     a {
       @include link-colors($color-bg, $color-bg, $color-bg, 0, !important);
     }
+  }
+
+  .text-bg__inner {
+    position: relative;
+    z-index: 2;
   }
 
   &.cover__color--black {
     .text-bg {
       color: $color-text;
       background-color: $color-bg;
+      box-shadow: $text-bg $color-bg;
       a {
         @extend %black-link;
       }
@@ -46,21 +54,8 @@
   &.cover__color--transparent {
     .text-bg {
       background-color: transparent;
+      box-shadow: none;
     }
-  }
-
-  .text-bg {
-    padding: $extraPadding 0 $extraPadding*1.5;
-    position: relative;
-    left: -$extraPadding;
-  }
-  .text-bg--1 {
-    left: $extraPadding*4;
-  }
-  .text-bg--2 {
-    left: -$extraPadding*2;
-    padding: 0;
-    z-index: 2;
   }
 }
 

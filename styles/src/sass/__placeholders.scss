@@ -13,3 +13,17 @@ $monospace: Menlo, Consolas, 'Courier New', monospace;
 %monospace {
   font-family: $monospace;
 }
+
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%hr {
+  max-width: 10em;
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+  background-color: #d9d9d9;
+  background-image: linear-gradient(to right, #fff, #d9d9d9 20%, #d9d9d9 80%, #fff);
+}
