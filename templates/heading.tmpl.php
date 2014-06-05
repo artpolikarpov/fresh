@@ -15,12 +15,12 @@
 <?php } elseif (array_key_exists ('heading', $content)) { ?>
   
   <div class="e2-heading">
-    
-    <h2>
 
-      <?php if (array_key_exists ('superheading', $content)): ?>
-        <span class="e2-heading-super"><?= $content['superheading'] ?></span>
-      <?php endif ?>
+    <?php if (array_key_exists ('superheading', $content)): ?>
+      <div class="e2-heading-super"><?= $content['superheading'] ?></div>
+    <?php endif ?>
+
+    <h2>
 
       <?= $content['heading'] ?>
       
