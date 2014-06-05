@@ -9,15 +9,18 @@
   margin-bottom: .6em;
 
   h1 {
-    font-size: (42/16)+em;
-    line-height: 1.1;
+    //font-size: (42/16)+em;
+    //line-height: 1.1;
 
-    //@extend %ellipsis;
+    @extend %ellipsis;
+    padding: 1em;
+    margin: -1em;
+    width: 75%;
 
-    .layout--cover &{
+    //.layout--cover &{
       font-size: (18/16)+em;
       line-height: 1.4;
-    }
+    //}
 
     a {
       @extend %black-link;
