@@ -24,7 +24,7 @@ a, a u {
 }
 
 a {
-  @include link-colors($color-link, $color-hover, $color-hover);
+  @include color-n-border($color-link);
 
 
   .menu &,
@@ -43,6 +43,10 @@ a {
     &:visited {
       @include color-n-border($color-visited);
     }
+  }
+
+  &:hover {
+    @include color-n-border($color-hover, $link-underline-opacity, !important);
   }
 }
 

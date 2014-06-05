@@ -5,7 +5,7 @@
 
 <div class="js-cover blog-title">
   <div class="title">
-    <h1><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
+    <h1><span class="text-bg"><span class="text-bg__inner">
       <?= _A ('<a href="'. $content['blog']['href']. '"><span id="e2-blog-title">'. $content['blog']['title']. '</span></a>') ?>
       <?php
         if (
@@ -16,7 +16,7 @@
       ?>
         <a href="<?= $content['admin-hrefs']['name-and-author'] ?>" class="nu"><span class="i-edit"></span></a>
       <?php } ?>
-    </span></span></span></h1>
+    </span></span></h1>
   </div>
 
   <?php if ($content['frontpage?']) { ?>

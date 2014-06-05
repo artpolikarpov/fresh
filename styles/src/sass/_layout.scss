@@ -1,12 +1,4 @@
-/* Раскладка */
-//.admin-menu {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  right: 0;
-//  background: #fff;
-//}
-
+/* Макет */
 .layout {
   min-width: 0;
   max-width: 100%;
@@ -65,7 +57,7 @@
 }
 
 .e2-text {
-  p, ul, ol, li, blockquote, pre, h2, h3, h4, h5, h6, hr {
+  p, ul, ol, li, blockquote, pre, h2, h3, h4, h5, h6 {
     @extend %text-max-width;
   }
 }

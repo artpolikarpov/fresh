@@ -45,7 +45,7 @@ $(function () {
   });
 
   $('*[lead]').each(function () {
-    $(this).wrapInner('<span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"></span></span></span>').appendTo($('.js-cover-lead', $dummy));
+    $(this).wrapInner('<span class="text-bg"><span class="text-bg__inner"></span></span>').appendTo($('.js-cover-lead', $dummy));
   });
 
   fotorama.load([{img: src, html: '<div class="layout layout--cover cover__layout ' + colors + ' fotorama__select"><div class="layout__floor cover__floor">' + $dummy.html() +'</div></div>'}]);

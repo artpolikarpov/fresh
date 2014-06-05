@@ -11,17 +11,17 @@
 
   <?php if (@$note['published?']) { ?>
 
-  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?>"><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"><?= _AGO ($note['time']) ?></span></span></span></div>
+  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?>"><span class="text-bg"><span class="text-bg__inner"><?= _AGO ($note['time']) ?></span></span></div>
 
   <?php } else { ?>
 
-  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span></span></span></div>
+  <div class="e2-note-date" title="<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['time'])?> (<?=_DT ('j {month-g} Y, H:i, {zone}', @$note['last-modified'])?>)"><span class="text-bg"><span class="text-bg__inner"><?=_DT ('j {month-g} Y, H:i', @$note['time'])?></span></span></div>
 
   <?php } ?>
 
   <?php // TITLE // ?>
   <h1 class="<?= ($note['published?'] and !$note['future?'])? 'e2-published' : 'e2-draft' ?> e2-smart-title e2-note-title">
-    <span class="text-bg"><span class="text-bg text-bg--1"><span class="text-bg text-bg--2">
+    <span class="text-bg"><span class="text-bg__inner">
       <?= _A ('<a href="'. $note['href']. '">'. $note['title']. '</a>') ?>
 
       <span style="white-space: nowrap">
@@ -46,7 +46,7 @@
       <?php endif ?>
 
       </span>
-    </span></span></span>
+    </span></span>
   </h1>
 
   <div class="e2-note-text e2-text js-cover-lead"></div>
@@ -104,12 +104,12 @@
 $tags = array ();
 foreach ($note['tags'] as $tag) {
   if ($tag['current?']) {
-    $tags[] = '<span class="e2-tag e2-marked">'. $tag['name'] .'</span>';
+    $tags[] = '<span><span class="e2-tag e2-marked">'. $tag['name'] .'</span></span>';
   } else {
-    $tags[] = '<a href="'. $tag['href'] .'" class="e2-tag">'. $tag['name'] .'</a>';
+    $tags[] = '<span><a href="'. $tag['href'] .'" class="e2-tag">'. $tag['name'] .'</a></span>';
   }
 }
-echo implode (' &nbsp; ', $tags)
+echo implode ('', $tags)
 
 ?>
 </div>
