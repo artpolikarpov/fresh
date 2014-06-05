@@ -24,29 +24,21 @@ a, a u {
 }
 
 a {
-  @include color-n-border($color-link);
+  @include link-colors($color-link, $color-hover, $color-hover, 0);
 
 
   .menu &,
   .footer &,
   .no-visited &,
   &.no-visited {
-    &:visited {
-      @include color-n-border($color-link);
-    }
+    @include link-colors(0, $color-hover, 0, $color-link);
   }
 
   .e2-text &,
   .e2-note-comments-link &,
   .e2-note-tags &,
   .e2-pages & {
-    &:visited {
-      @include color-n-border($color-visited);
-    }
-  }
-
-  &:hover {
-    @include color-n-border($color-hover, $link-underline-opacity, !important);
+    @include link-colors(0, $color-hover, 0, $color-visited);
   }
 }
 

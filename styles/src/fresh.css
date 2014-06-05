@@ -120,20 +120,38 @@ a {
   border-color: #0060a0;
   border-color: rgba(0, 96, 160, 0.2);
 }
+a[disabled] {
+  color: #0060a0 !important;
+}
+a:active {
+  color: #e05020;
+  border-color: #e05020;
+  border-color: rgba(224, 80, 32, 0.2);
+}
+a:hover, a.hover {
+  color: #e05020;
+  border-color: #e05020;
+  border-color: rgba(224, 80, 32, 0.9);
+}
 .menu a:visited, .footer a:visited, .no-visited a:visited, a.no-visited:visited {
   color: #0060a0;
   border-color: #0060a0;
   border-color: rgba(0, 96, 160, 0.2);
+}
+.menu a:hover, .menu a.hover, .footer a:hover, .footer a.hover, .no-visited a:hover, .no-visited a.hover, a.no-visited:hover, a.no-visited.hover {
+  color: #e05020;
+  border-color: #e05020;
+  border-color: rgba(224, 80, 32, 0.9);
 }
 .e2-text a:visited, .e2-note-comments-link a:visited, .e2-note-tags a:visited, .e2-pages a:visited {
   color: #39586c;
   border-color: #39586c;
   border-color: rgba(57, 88, 108, 0.2);
 }
-a:hover {
-  color: #e05020 !important;
-  border-color: #e05020 !important;
-  border-color: rgba(224, 80, 32, 0.2) !important;
+.e2-text a:hover, .e2-text a.hover, .e2-note-comments-link a:hover, .e2-note-comments-link a.hover, .e2-note-tags a:hover, .e2-note-tags a.hover, .e2-pages a:hover, .e2-pages a.hover {
+  color: #e05020;
+  border-color: #e05020;
+  border-color: rgba(224, 80, 32, 0.9);
 }
 
 a.black-link, .title h1 a, .e2-note-title a, .cover__layout.cover__color--black .text-bg a {
