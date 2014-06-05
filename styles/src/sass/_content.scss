@@ -1,5 +1,21 @@
 .e2-heading {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  h2 {
+    font-size: (18/16)+em;
+    line-height: 1.4;
+
+    + * {
+      margin-top: .5em;
+    }
+  }
+}
+
+.e2-heading-super,
+.e2-note-date {
+  font-size: (13/16)+em;
+  margin-bottom: .4em;
+  position: relative;
+  z-index: 2;
 }
 
 .e2-note, .e2-comment {
@@ -25,13 +41,6 @@
   a {
     @extend %black-link;
   }
-}
-
-.e2-note-date {
-  font-size: (13/16)+em;
-  margin-bottom: .4em;
-  position: relative;
-  z-index: 2;
 }
 
 .e2-text {

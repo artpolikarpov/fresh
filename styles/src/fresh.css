@@ -229,12 +229,23 @@ img.upyachka {
   margin: 0 .5em;
 }
 
+.e2-heading {
+  margin-bottom: 1.5em;
+}
 .e2-heading h2 {
-  margin-bottom: .2em;
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+.e2-heading h2 + * {
+  margin-top: .5em;
 }
 
-.e2-heading {
-  margin-bottom: 1em;
+.e2-heading-super,
+.e2-note-date {
+  font-size: 0.8125em;
+  margin-bottom: .4em;
+  position: relative;
+  z-index: 2;
 }
 
 .e2-note, .e2-comment {
@@ -255,13 +266,6 @@ img.upyachka {
     max-width: 14em;
     padding-bottom: 0.47619em;
   }
-}
-
-.e2-note-date {
-  font-size: 0.8125em;
-  margin-bottom: .4em;
-  position: relative;
-  z-index: 2;
 }
 
 .e2-text {
