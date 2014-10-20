@@ -540,7 +540,6 @@ img.upyachka {
 }
 
 .sub-content {
-  overflow: hidden;
   margin-bottom: 3em;
 }
 .sub-content#comments {
@@ -549,6 +548,13 @@ img.upyachka {
 .sub-content#comments .sub-content__wrap {
   padding-top: 2em;
   padding-bottom: 1em;
+}
+.sub-content:after, .sub-content:before {
+  content: '';
+  display: table;
+}
+.sub-content:after {
+  clear: both;
 }
 
 .e2-comment {

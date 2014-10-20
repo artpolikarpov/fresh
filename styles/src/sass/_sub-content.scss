@@ -1,6 +1,4 @@
 .sub-content {
-  overflow: hidden;
-
   &#comments {
     background-color: #f5f6f7;
     .sub-content__wrap {
@@ -10,4 +8,16 @@
   }
 
   margin-bottom: 3em;
+
+  
+  //overflow: hidden;
+  &:after,
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
