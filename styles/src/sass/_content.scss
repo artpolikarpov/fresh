@@ -28,7 +28,7 @@
   padding: 1em 1em (20/30)+em;
   margin-left: -1em;
   margin-top: -1em;
-  width: 80%;
+  width: 100%;
   @extend %ellipsis;
   @media screen and (min-width: $break-point) {
     //.layout--cover & {

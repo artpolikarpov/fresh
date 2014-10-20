@@ -35,11 +35,14 @@ pre, tt, code, pre *, tt *, code * {
   padding: 0;
   position: relative;
 }
+.layout.cover {
+  margin-top: 3em;
+}
 .layout.cover:before {
   content: '';
   position: absolute;
   top: -24px;
-  margin-top: -2em;
+  margin-top: -3em;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -226,7 +229,7 @@ img.upyachka {
 .title h1 {
   padding: 1em;
   margin: -1em;
-  width: 75%;
+  width: 80%;
   font-size: 1.125em;
   line-height: 1.4;
 }
@@ -276,12 +279,12 @@ img.upyachka {
   padding: 1em 1em 0.66667em;
   margin-left: -1em;
   margin-top: -1em;
+  width: 100%;
 }
 @media screen and (min-width: 760px) {
   .e2-note-title {
     font-size: 2.625em;
     line-height: 1.1;
-    max-width: 14em;
     padding-bottom: 0.47619em;
   }
 }
@@ -315,7 +318,8 @@ img.upyachka {
 .e2-text blockquote {
   margin-top: 0;
 }
-.e2-text-generic-object, .e2-text-table, .e2-text-audio,
+.e2-text-generic-object, .e2-text-table,
+.e2-text > table, .e2-text-audio,
 .e2-text blockquote,
 .e2-text [aside] {
   margin-bottom: 1.5em;
