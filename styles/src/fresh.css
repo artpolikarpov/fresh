@@ -188,6 +188,10 @@ html {
   height: auto;
 }
 
+.e2-text-picture a {
+  max-width: 100%;
+}
+
 img.upyachka {
   background-color: #f5f6f7;
 }
@@ -339,6 +343,14 @@ img.upyachka {
 }
 .e2-text img[alt^="cover!"] {
   display: inline;
+}
+.e2-text-picture {
+  text-align: center;
+}
+.e2-text-picture p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .e2-text-picture, .e2-text-video,
 .e2-text pre {

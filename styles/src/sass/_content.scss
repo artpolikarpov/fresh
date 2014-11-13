@@ -112,6 +112,15 @@
     display: inline;
   }
 
+  &-picture {
+    text-align: center;
+    p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   &-picture,
   &-video,
   pre {
