@@ -66,9 +66,9 @@
 <?php if ($note['shareable?']) { ?> 
 <?php if ($note['published?'] and !$note['future?']) { ?> 
 
-<?php _LIB ('social-likes') ?>
+<?php _LIB ('likely') ?>
 <div class="e2-note-likes">
-<div class="social-likes" data-url="<?= $note['href-original'] ?>" data-title="<?= strip_tags ($note['title']) ?>">
+<div class="likely" data-url="<?= $note['href-original'] ?>" data-title="<?= strip_tags ($note['title']) ?>">
 
 <?php foreach ($note['share-to'] as $network => $network_info) { ?>
 <?php if ($network_info['share?']) { ?>
