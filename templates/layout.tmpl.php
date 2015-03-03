@@ -47,7 +47,7 @@
           </li>
         <?php } ?>
 
-        <?php if ($content['tags-menu']['not-empty?']) { ?>
+        <?php if (array_key_exists ('tags', $content['hrefs'])) { ?>
           <li>
             <?php if (_AT ($content['hrefs']['tags'])): ?>
             <?= _S ('gs--tags') ?>
